@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de texto</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="logo">
         <img src="images/LogoAlura.png" alt="Logo da Alura">
     </header>
-    <main>
-        <input type="text" name="meuTexto">
-        <div>
-            <p>Apenas letras minúsculas e sem acento.</p>
+    <main class="principal"> 
+        <div class="principal__inputs">
+            <textarea id="text" class="principal__inputs__input" rows="9" cols="30" placeholder="Digite seu texto"></textarea>
+            <div class="principal__inputs__paragrafo">
+                <img src="images/Group.png" alt="">
+                <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="principal__inputs__botoes">
+                <button onclick="criptografar()" >criptografar</button>
+                <button onclick="descriptografar()">descriptografar</button>
+            </div>
         </div>
-        <div>
-            <button></button>
-            <button></button>
-        </div>
-        <div>
-            
+        
+        <div class="principal__outputs">
+            <p id="principal__outputs__textoCriptografado" class="principal__outputs__textoCriptografado"></p>
+            <img id="principal_outputs_imagem" class="principal_outputs_imagem" src="images/High quality products 1 1.png" alt="">
+            <h2 id="principal__outputs__vazio" class="principal__outputs__vazio">Nenhuma mensagem encontrada</h2>
+            <p id="principal__outputs_paragrafo" class="principal__outputs_paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
         </div>
         
     </main>
-    <footer></footer>
-    
+    <footer>
+
+    </footer>
+    <script src="app.js" defer></script>
 </body>
 </html>

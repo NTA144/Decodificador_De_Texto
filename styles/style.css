@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #E5E5E5;
+    display: flex;
+    height: auto;
+    
+}
+.logo{
+    padding: 2% 0%;
+}
+.principal{
+    display: flex;
+
+}
+.principal__inputs{
+    width: 65%;
+}
+.principal__inputs__paragrafo{
+    margin-left: 10%;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #495057;
+    display: flex;
+    gap: 1%;
+}
+
+.principal__outputs{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 40px;
+    margin-right: 2%;
+    margin-left: 3%;
+    height: 100%;
+    width: 380px;
+    border-radius: 32px;
+}
+
+.principal__inputs__input{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    outline: unset;
+    border: 0px;
+    background-color: #E5E5E5;
+    color:#0A3871;
+    font-size: 25px;
+    margin-left: 85px;
+    width: 680px;
+    margin-bottom: 75px;
+    margin-top: 168px;
+}
+.principal__outputs__vazio{
+    margin: 0px 21px 0px 16px;
+    
+}
+.principal__outputs_paragrafo{
+    margin: 0px 21px 0px 22px;
+    text-align: center;
+}
+
+
+
+.principal__inputs__botoes{
+   display: flex;
+   margin-top: 11px;
+   margin-left: 85px;
+   width: 800px;
+   height: 50px;
+   gap: 50px;
+ 
+  
+
+
+}
+button{
+    width: 300px;
+    height: 70px;
+    border-radius: 24px;
+    border: 0px;
+    background-color: #0A3871;
+    color: aliceblue;
+}
+button:hover{
+    background-color: #6f8dab;
+    color: #0A3871;
+}
+.principal_outputs_imagem{
+    margin:100px 16px 50px 16px;
+
+}
+.principal__outputs__textoCriptografado{
+    margin: 119px 29px 0px 22px;
+    height: 300px;
+    display: none;
+}
+.principal__inputs__input::placeholder{
+    color: #0A3871;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    
+}
+
+@media (max-width: 1024px){
+    .principal{
+        flex-direction: column;
+    .principal__inputs__botoes    
+        
+    }
+    .principal__inputs__botoes{
+        margin-left: 30px;
+    }
+    .principal__inputs__paragrafo{
+        margin-left: 30px;
+    }
+
+    .principal__outputs{
+        width: 80%;
+    }
+}
