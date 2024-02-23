@@ -1,4 +1,5 @@
 
+
 function criptografar() {
     let text= document.getElementById("text").value;
     console.log(text);
@@ -12,14 +13,31 @@ function criptografar() {
         noTextParagrafo.style.display= "none";
 
         let resposta= document.getElementById("principal__outputs__textoCriptografado")
-    
         resposta.innerText=encode(text);
         resposta.style.display= "block";
         
         
+    }else{
+      var larguraDaTela = window.innerWidth;
+
+            
+      if (larguraDaTela > 1080) {
+        console.log('Tela menor que 1080 pixels - execute alguma ação aqui');
+        let noTextImg = document.getElementById("principal_outputs_imagem");
+        noTextImg.style.display= "block";
+      }
+      
+      let noTextTitulo= document.getElementById("principal__outputs__vazio");
+      noTextTitulo.style.display= "block";
+      let noTextParagrafo = document.getElementById("principal__outputs_paragrafo");
+      noTextParagrafo.style.display= "block";
+      let resposta= document.getElementById("principal__outputs__textoCriptografado")
+      resposta.style.display= "none";
+      
     }
+  }
     
-}
+
 
 function descriptografar() {
   let text= document.getElementById("text").value;
@@ -33,10 +51,29 @@ function descriptografar() {
       let noTextParagrafo = document.getElementById("principal__outputs_paragrafo");
       noTextParagrafo.style.display= "none";
       let resposta= document.getElementById("principal__outputs__textoCriptografado")
+
+      
       resposta.innerText=decode(text);
       resposta.style.display= "block";
       
       
+  }else{
+    var larguraDaTela = window.innerWidth;
+
+          
+    if (larguraDaTela > 1080) {
+      console.log('Tela menor que 1080 pixels - execute alguma ação aqui');
+      let noTextImg = document.getElementById("principal_outputs_imagem");
+      noTextImg.style.display= "block";
+    }
+    
+    let noTextTitulo= document.getElementById("principal__outputs__vazio");
+    noTextTitulo.style.display= "block";
+    let noTextParagrafo = document.getElementById("principal__outputs_paragrafo");
+    noTextParagrafo.style.display= "block";
+    let resposta= document.getElementById("principal__outputs__textoCriptografado")
+    resposta.style.display= "none";
+    
   }
   
 }
@@ -57,8 +94,7 @@ function encode(texto) {
   var novoTexto = texto.replace(/[aeiou]/g, function(match) {
     return mapeamento[match];
   });
-
-  return novoTexto;
+    return novoTexto;
 }
 
 function decode(texto) {
@@ -78,5 +114,8 @@ function decode(texto) {
     return mapeamento[match];
   });
 
+ 
   return novoTexto;
+  
+  
 }

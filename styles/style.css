@@ -32,6 +32,8 @@ body{
 }
 
 .principal__outputs{
+    box-shadow: 5px 5px 10px #888888;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -57,10 +59,15 @@ body{
     margin-top: 168px;
 }
 .principal__outputs__vazio{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
     margin: 0px 21px 0px 16px;
     
 }
 .principal__outputs_paragrafo{
+    color: #0A3871;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
     margin: 0px 21px 0px 22px;
     text-align: center;
 }
@@ -68,8 +75,9 @@ body{
 
 
 .principal__inputs__botoes{
+    
    display: flex;
-   margin-top: 11px;
+   margin-top: 13px;
    margin-left: 85px;
    width: 800px;
    height: 50px;
@@ -80,6 +88,7 @@ body{
 
 }
 button{
+    box-shadow: 5px 5px 10px #888888;
     width: 300px;
     height: 70px;
     border-radius: 24px;
@@ -94,11 +103,14 @@ button:hover{
 .principal_outputs_imagem{
     margin:100px 16px 50px 16px;
 
+
 }
 .principal__outputs__textoCriptografado{
-    margin: 119px 29px 0px 22px;
+    overflow-wrap: break-word;
+    margin: 25px 29px 0px 22px;
     height: 300px;
     display: none;
+    font-family: 'Inter', sans-serif;
 }
 .principal__inputs__input::placeholder{
     color: #0A3871;
@@ -108,11 +120,38 @@ button:hover{
     
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1080px){
+    body{
+        flex-direction: column;
+        padding-left: 0px;
+    }
+
+    
     .principal{
         flex-direction: column;
-    .principal__inputs__botoes    
-        
+        padding-left: 70px;
+    }
+    .principal__inputs__botoes{
+        width: 120%;
+    }
+    .principal__inputs__input{
+    
+        width: 50vh;
+        margin-left: 40px;
+    }
+
+    .principal_outputs_imagem{
+        display: none;
+        max-width: 100;
+    }
+    
+    .principal__outputs__textoCriptografado{
+        max-width: 80vh;
+        margin: 20px 29px 0px;
+        font-size: 24px;
+        height: 200px;
+        display: none;
+        font-family: 'Inter', sans-serif;
     }
     .principal__inputs__botoes{
         margin-left: 30px;
@@ -124,4 +163,46 @@ button:hover{
     .principal__outputs{
         width: 80%;
     }
+}
+
+@media (max-width: 440px){
+
+    .logo{
+        padding-left: 20px;
+    }
+    .logo_alura{
+        content: url(images\logo_alura_cel.png);
+    }
+    body{
+        padding-left: 0px;
+    }
+    .principal{
+        padding-left: 58px;
+    }
+    button{
+        width: 36vh;
+        height: 50px;
+        border-radius: 20px;
+    }
+    .principal__inputs__input{
+        width: 35vh;
+        margin: 40px 30px 0px 10px;
+    }
+    .principal__inputs__botoes{
+        gap:17px;
+        margin:0px;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    .principal__inputs__paragrafo{
+        width: 300px;
+        margin-left: 0px;
+    }
+    .principal__outputs{
+        width: 36vh;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
 }
