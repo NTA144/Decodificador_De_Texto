@@ -1,6 +1,7 @@
 # Decodificador_De_Texto
 ### #challengeonedecodificador6
 ## Descrição do Projeto
+    projeto realizado para consolidar conhecimento obtidos na primeira etapa do Programa ONE - Oracle Next Education. 
 ### As "chaves" de criptografia são as seguintes:
 
     A letra "e" é convertida para "enter"
