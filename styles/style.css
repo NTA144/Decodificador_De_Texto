@@ -49,7 +49,9 @@ body{
 .principal__inputs__textocopiar{
     display:none;
 }
-
+footer{
+    color: black;
+}
 .principal__inputs__input{
     font-family: 'Inter', sans-serif;
     font-weight: 500;

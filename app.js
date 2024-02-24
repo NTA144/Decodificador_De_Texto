@@ -4,8 +4,9 @@ function criptografar() {
     let text= document.getElementById("text").value;
     let lenText= text;
     let larguraDaTela = window.innerWidth;  
-    //se houver texto retira a mensagem de texto não encontrado da tela e apresenta texto criptografado.
-     if (lenText.length>0) {
+    if (verificaMinusculasSemAcento(text)){
+       //se houver texto retira a mensagem de texto não encontrado da tela e apresenta texto criptografado.
+      if (lenText.length>0) {
         let noTextImg = document.getElementById("principal_outputs_imagem");
         noTextImg.style.display= "none";
         let noTextTitulo= document.getElementById("principal__outputs__vazio");
@@ -22,7 +23,7 @@ function criptografar() {
         }
         
     // caso não tenha nenhum texto apresenta mensagem de nenhum texto encontrado
-    }else{
+      }else{
             
       if (larguraDaTela > 1080) {
         let noTextImg = document.getElementById("principal_outputs_imagem");
@@ -36,9 +37,22 @@ function criptografar() {
       let resposta= document.getElementById("principal__outputs__textoCriptografado")
       resposta.style.display= "none";
       
-    }
-  }
+        }
+      }else{
+        alert("Use somente letras minúsculas e sem acento.")
+      }
     
+  }
+
+
+
+  function verificaMinusculasSemAcento(texto) {
+    // Remove os acentos da string
+    const textoSemAcento = texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    // Verifica se a string original é igual à versão em minúsculas sem acentos
+    return texto === textoSemAcento.toLowerCase();
+  }
 function copiarConteudo(){
   let tl_sel = document.getElementById('principal__outputs__textoCriptografado').innerHTML;
   navigator.clipboard.writeText(tl_sel);
@@ -49,8 +63,9 @@ function copiarConteudo(){
 function descriptografar() {
   let text= document.getElementById("text").value;
   let lenText= text;
-  //se houver texto retira a mensagem de texto não encontrado da tela e apresenta texto descriptografado.
-   if (lenText.length>0) {
+
+  if (verificaMinusculasSemAcento(text)){
+    if (lenText.length>0) {
       let noTextImg = document.getElementById("principal_outputs_imagem");
       noTextImg.style.display= "none";
       let noTextTitulo= document.getElementById("principal__outputs__vazio");
@@ -83,6 +98,11 @@ function descriptografar() {
     
   }
   
+  }else{
+    alert("Use somente letras minúsculas e sem acento.")
+  }
+  
+   
 }
 //criptografa texto recebido
 function encode(texto) {
