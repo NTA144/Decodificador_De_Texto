@@ -11,6 +11,7 @@ body{
     height: auto;
     
 }
+
 .logo{
     padding: 2% 0%;
 }
@@ -43,6 +44,10 @@ body{
     height: 100%;
     width: 380px;
     border-radius: 32px;
+}
+
+.principal__inputs__textocopiar{
+    display:none;
 }
 
 .principal__inputs__input{
@@ -96,6 +101,12 @@ button{
     background-color: #0A3871;
     color: aliceblue;
 }
+.principal__outputs__textoCriptografado:hover{
+    color:#8db3ec;
+}
+
+
+
 button:hover{
     background-color: #6f8dab;
     color: #0A3871;
@@ -144,7 +155,15 @@ button:hover{
         display: none;
         max-width: 100;
     }
-    
+    .principal__inputs__textocopiar{
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: #495057;
+        width: 500px;
+        padding-left: 30% ;
+        padding-top: 20%;
+    }
     .principal__outputs__textoCriptografado{
         max-width: 80vh;
         margin: 20px 29px 0px;
@@ -183,6 +202,14 @@ button:hover{
         width: 36vh;
         height: 50px;
         border-radius: 20px;
+    }
+    .principal__inputs__textocopiar{
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        color: #495057;
+        width: 300px;
+        padding-left: 18%;
     }
     .principal__inputs__input{
         width: 35vh;

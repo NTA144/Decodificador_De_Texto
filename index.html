@@ -23,11 +23,13 @@
             <div class="principal__inputs__botoes">
                 <button onclick="criptografar()" >criptografar</button>
                 <button onclick="descriptografar()">descriptografar</button>
+                
             </div>
+            <p id="principal__inputs__textocopiar"  class="principal__inputs__textocopiar">Toque no texto para copiar</p>
         </div>
         
-        <div class="principal__outputs">
-            <p id="principal__outputs__textoCriptografado" class="principal__outputs__textoCriptografado"></p>
+        <div class="principal__outputs" onclick="copiarConteudo(this)">
+            <p id="principal__outputs__textoCriptografado" class="principal__outputs__textoCriptografado" ></p>
             <img id="principal_outputs_imagem" class="principal_outputs_imagem" src="images/High quality products 1 1.png" alt="">
             <h2 id="principal__outputs__vazio" class="principal__outputs__vazio">Nenhuma mensagem encontrada</h2>
             <p id="principal__outputs_paragrafo" class="principal__outputs_paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>

@@ -3,6 +3,7 @@
 function criptografar() {
     let text= document.getElementById("text").value;
     let lenText= text;
+    let larguraDaTela = window.innerWidth;  
     //se houver texto retira a mensagem de texto não encontrado da tela e apresenta texto criptografado.
      if (lenText.length>0) {
         let noTextImg = document.getElementById("principal_outputs_imagem");
@@ -15,10 +16,14 @@ function criptografar() {
         let resposta= document.getElementById("principal__outputs__textoCriptografado");
         resposta.innerText=encode(text);
         resposta.style.display= "block";
+        if (larguraDaTela < 1080){
+          let copiarTexto= document.getElementById("principal__inputs__textocopiar");
+          copiarTexto.style.display="block";
+        }
         
     // caso não tenha nenhum texto apresenta mensagem de nenhum texto encontrado
     }else{
-      let larguraDaTela = window.innerWidth;        
+            
       if (larguraDaTela > 1080) {
         let noTextImg = document.getElementById("principal_outputs_imagem");
         noTextImg.style.display= "block";
@@ -34,6 +39,11 @@ function criptografar() {
     }
   }
     
+function copiarConteudo(){
+  let tl_sel = document.getElementById('principal__outputs__textoCriptografado').innerHTML;
+  navigator.clipboard.writeText(tl_sel);
+  alert("Texto copiado para area de transferência!")
+  }
 
 //criptografar é usada quando o botão descriptografar é acionado.
 function descriptografar() {
