@@ -10,4 +10,4 @@ Este decodificador é uma aplicação simples que permite a você codificar e de
 - **Interface Intuitiva:** A aplicação possui uma interface simples e amigável para facilitar a interação.
 
 
- [Link do do projeto funcionando.](google.com)
+ [Link do do projeto funcionando.](https://google.com)
