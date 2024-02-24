@@ -1,9 +1,9 @@
 
-
+//criptografar é usada quando o botão criptografar é acionado.
 function criptografar() {
     let text= document.getElementById("text").value;
-    console.log(text);
     let lenText= text;
+    //se houver texto retira a mensagem de texto não encontrado da tela e apresenta texto criptografado.
      if (lenText.length>0) {
         let noTextImg = document.getElementById("principal_outputs_imagem");
         noTextImg.style.display= "none";
@@ -12,17 +12,14 @@ function criptografar() {
         let noTextParagrafo = document.getElementById("principal__outputs_paragrafo");
         noTextParagrafo.style.display= "none";
 
-        let resposta= document.getElementById("principal__outputs__textoCriptografado")
+        let resposta= document.getElementById("principal__outputs__textoCriptografado");
         resposta.innerText=encode(text);
         resposta.style.display= "block";
         
-        
+    // caso não tenha nenhum texto apresenta mensagem de nenhum texto encontrado
     }else{
-      var larguraDaTela = window.innerWidth;
-
-            
+      let larguraDaTela = window.innerWidth;        
       if (larguraDaTela > 1080) {
-        console.log('Tela menor que 1080 pixels - execute alguma ação aqui');
         let noTextImg = document.getElementById("principal_outputs_imagem");
         noTextImg.style.display= "block";
       }
@@ -38,11 +35,11 @@ function criptografar() {
   }
     
 
-
+//criptografar é usada quando o botão descriptografar é acionado.
 function descriptografar() {
   let text= document.getElementById("text").value;
-  console.log(text);
   let lenText= text;
+  //se houver texto retira a mensagem de texto não encontrado da tela e apresenta texto descriptografado.
    if (lenText.length>0) {
       let noTextImg = document.getElementById("principal_outputs_imagem");
       noTextImg.style.display= "none";
@@ -56,13 +53,13 @@ function descriptografar() {
       resposta.innerText=decode(text);
       resposta.style.display= "block";
       
-      
+  // caso não tenha nenhum texto apresenta mensagem de nenhum texto encontrado    
   }else{
-    var larguraDaTela = window.innerWidth;
+    let larguraDaTela = window.innerWidth;
 
           
     if (larguraDaTela > 1080) {
-      console.log('Tela menor que 1080 pixels - execute alguma ação aqui');
+      
       let noTextImg = document.getElementById("principal_outputs_imagem");
       noTextImg.style.display= "block";
     }
@@ -77,7 +74,7 @@ function descriptografar() {
   }
   
 }
-
+//criptografa texto recebido
 function encode(texto) {
   if (!texto) {
     return "";
@@ -91,18 +88,18 @@ function encode(texto) {
     'u': 'ufat'
   };
 
-  var novoTexto = texto.replace(/[aeiou]/g, function(match) {
+  let novoTexto = texto.replace(/[aeiou]/g, function(match) {
     return mapeamento[match];
   });
     return novoTexto;
 }
-
+//descriptografa texto recebido
 function decode(texto) {
   if (!texto) {
     return "";
   }
 
-  var mapeamento = {
+  let mapeamento = {
   'ai': 'a',
   'enter': 'e',
   'imes': 'i',
@@ -110,7 +107,7 @@ function decode(texto) {
   'ufat': 'u'
   };
 
-  var novoTexto = texto.replace(/ai|enter|imes|ober|ufat/g, function(match) {
+  let novoTexto = texto.replace(/ai|enter|imes|ober|ufat/g, function(match) {
     return mapeamento[match];
   });
 
